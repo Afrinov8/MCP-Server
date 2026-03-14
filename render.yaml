@@ -1,13 +1,12 @@
 services:
   - type: web
-    name: cft-mcp-server--1
+    name: MCP-Server
     runtime: node
     buildCommand: npm install && npm run build
     startCommand: npm start
+    healthCheckPath: /health
     envVars:
       - key: CFT_BASE_URL
         value: https://cft-terminal-hub.vercel.app
-      - key: CFT_ADMIN_SECRET
-        sync: false
       - key: NODE_ENV
         value: production
