@@ -1,8 +1,10 @@
 {
   "name": "mcp-server",
   "version": "1.0.0",
+  "description": "CFT MCP Server for Chrome Fair Trade platform",
   "private": true,
   "type": "module",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js"
@@ -16,11 +18,8 @@
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.30",
     "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
-  "devDependencies": {
-    "@types/express": "^5.0.3",
-    "@types/node": "^20.11.30",
-    "typescript": "^5.3.3"
-  }
-
